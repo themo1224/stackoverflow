@@ -14,8 +14,6 @@ class RegisterView(View):
         form= UserRegistrationForm(request.POST)
         if form.is_valid():
             cd= form.cleaned_data
-            User.objects.create_user(cd['username'], cd['email'], cd['password'])
-            messages.success(request,'Registration Successfully!', 'success')
-            return redirect('home')
-            
-            
+            User.objects.create_user(cd['username',cd['email'], cd['password']])
+            messages.success(request,'you, registration','success')
+            return redirect('home:home')
